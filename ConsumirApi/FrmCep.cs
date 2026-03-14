@@ -41,9 +41,10 @@ namespace ConsumirApi
             
             var json = response.Content.ReadAsStringAsync().Result;
 
-            cep ceps = (cep)JsonConvert.DeserializeObject(json);
-        
-            dgvCep.DataSource = ceps;
+            var ceps = JsonConvert.DeserializeObject<Cep>(json);
+
+
+            dgvCep.DataSource = new List<Cep> { ceps };
         }
 
         private void btnBuscarCep_Click(object sender, EventArgs e)

@@ -3,20 +3,23 @@ using Newtonsoft.Json;
 
 namespace ConsumirApi;
 
-internal class cep
+internal class Cep
 {
-    [JsonPropertyName("CEP")]
-    public string Cep { get; set; }
+    [JsonPropertyName("cep")]
+    public string cep { get; set; }
     
-    [JsonPropertyName("Cidade")]
-    public string cidade { get; set; }
+    [JsonPropertyName("state")]
+    public string state { get; set; }
     
-    [JsonPropertyName("Estado")]
-    public string estado { get; set; }
+    [JsonPropertyName("city")]
+    public string city { get; set; }
     
-    [JsonPropertyName("Rua")]
-    public string rua { get; set; }
+    [JsonPropertyName("neighborhood")]
+    public string neighborhood { get; set; }
 
-    [JsonPropertyName("Nei")]
-    public string nei { get; set; }
+    [JsonPropertyName("street")]
+    public string street { get; set; }
+
+    [JsonPropertyName("service")]
+    public string service { get; set; }
 }
